@@ -7,7 +7,6 @@ import Hero from "./components/Hero";
 export default function App() {
   return (
     <main>
-      <h1>Hello Oz!</h1>
       <Navbar />
       <Card />
       <Hero />

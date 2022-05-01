@@ -1,20 +1,20 @@
 import React from "react";
 
-import Pic1 from "../images/i1.jpeg";
 import Pic2 from "../images/star1.png";
 
-export default function Card() {
+export default function Card(props) {
+    console.log(props)
     return (
         <div className="card">
-            <img src={Pic1} className="card--image" />
+            <img src={props.img} className="card--image" alt="" />
             <div className="card--stats">
-                <img src={Pic2} className="card--star" />
-                <span>5.0</span>
-                <span className="gray">(6) .</span>
-                <span className="gray">SA</span>
+                <img src={Pic2} className="card--star" alt="" />
+                <span>{props.rating}</span>
+                <span className="gray">({props.reviewCount})•</span>
+                <span className="gray">{props.country}</span>
             </div>
-            <p>Life lessons with Owethu Sotomela</p>
-            <p><span className="bold">From Uitenhage</span></p>
+            <p>Life lessons with {props.title}</p>
+            <p><span className="bold">{props.price}</span></p>
         </div>
     )
 }

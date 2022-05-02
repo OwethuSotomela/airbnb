@@ -24,7 +24,9 @@ export default function App() {
   return (
     <main>
       <Navbar />
-      {cards}
+      <section className="cards-list">
+        {cards}
+      </section>
       <Hero />
     </main>
   )

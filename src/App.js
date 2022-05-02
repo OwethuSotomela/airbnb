@@ -4,20 +4,30 @@ import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 
-import OS_DP from "./images/OS-Avi.jpeg"
+import Data from "./Data";
+
+
+// import OS_DP from "./images/OS-Avi.jpeg"
+
+console.log(Data)
 
 export default function App() {
+
+  const cards = Data.map(item => {
+    return <Card
+      img={item.coverImg}
+      rating={item.stats.rating}
+      reviewCount={item.stats.reviewCount}
+      location={item.location}
+      title={item.title}
+      price={item.price}
+    />
+  })
+
   return (
     <main>
       <Navbar />
-      <Card
-        img={OS_DP}
-        rating={"5.0"}
-        reviewCount={6}
-        country={"South Africa"}
-        title={"Owethu Sotomela"}
-        price={"R136"}
-      />
+      {cards}
       <Hero />
     </main>
   )

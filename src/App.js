@@ -6,9 +6,6 @@ import Hero from "./components/Hero";
 
 import Data from "./Data";
 
-
-// import OS_DP from "./images/OS-Avi.jpeg"
-
 console.log(Data)
 
 export default function App() {
